@@ -290,4 +290,109 @@ for(int i=0;i<list.size;i++)
 
 }
 
+exception:
+
+suppose there are 10 exception found statement 5 will not execute.
+witout statement 5 other code will execute in exception
+
+checked:
+->ioexception,sqlexception
+
+unchecked:
+->arithmetic exception,
+null pointer exception,
+ArrayIndexoutofBoundsException
+
+jdbc:
+
+register the driver
+create connection
+create stement
+execute query
+closig connections
+
+
+jdom:
+
+String:
+
+<customer>
+    <age>35</age>
+    <name>aaa</name>
+</customer>
+
+SAXBuilder builder = new SAXBuilder();
+File xmlFile = new File("c:\\file.xml");
+Document document = (Document) builder.build(xmlFile);
+Element rootNode = document.getRootElement();
+List list = rootNode.getChildren("customer");
+
+for (int i = 0; i < list.size(); i++) {
+
+    Element node = (Element) list.get(i);
+
+    System.out.println("Age : " + node.getChildText("age"));
+    System.out.println("Name : " + node.getChildText("name"));         
+}
+
+jdom:
+dwr.xml:
+jaxb:
+->convert object to xml  and xml to object
+
+dwr:
+
+java servlet running on the server that process requests and send response back to browser
+javascript running in the browser sends request and can dynamically update the web page
+
+
+patinetfax.js
+dwr.xml
+loadrh
+Bo 
+Dao
+
+web.xml:
+<servlet>
+<servlet-name>dwr-invoker</servlet-name>
+<servlet-class>org.directwebremoting.servlet.Dwrservlet</servlet-class>
+<init-param>
+<param-value>debug</param-value>
+<param-value>true</param-value>
+</init-param>
+<init-param>
+<param-value>crossDomainSession</param-value>
+<param-value>false</param-value>
+</init-param>
+</servlet>
+
+
+<mime-mapping>
+<extension>pdf</extension>
+<mime-type>application/pdf</mime-type>
+</mime-mapping>
+
+<filter>
+<filet-name>timout</filter-name>
+<display-name>timeout</display-name>
+<filter-class>com.test.timoutFilter</filet-class>
+</filter>
+
+
+dwr.xml:
+
+<dwr>
+<allow>
+<create creator="new" javascript="mscpatientdocs"/>
+<param name="class" value="com.test.pojo.loadrh"/>
+<include method="getinbound">
+<include method="outobund">
+<include method="getpending">
+</create>
+</allow>
+</dwr>
+
+https://www.geeksforgeeks.org/category/programming-language/java/
+http://www.java2novice.com/java-interview-programs/
+
 
